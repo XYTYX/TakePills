@@ -7,11 +7,14 @@ public class DrugInfo {
 
     String name;
     int amount;
-    int time;
     int dateEnd;
     boolean morning;
     boolean noon;
     boolean night;
+
+    public DrugInfo() {
+
+    }
 
     public String getName() {
         return name;
@@ -29,7 +32,35 @@ public class DrugInfo {
         this.amount = n;
     }
 
+    public boolean isMorning() {
+        return morning;
+    }
 
+    public void setMorning(boolean morning) {
+        this.morning = morning;
+    }
 
+    public boolean isNoon() {
+        return noon;
+    }
 
+    public void setNoon(boolean noon) {
+        this.noon = noon;
+    }
+
+    public boolean isNight() {
+        return night;
+    }
+
+    public void setNight(boolean night) {
+        this.night = night;
+    }
+
+    public int getDateEnd() {
+        return dateEnd;
+    }
+
+    public void setDateEnd(int dateEnd) {
+        this.dateEnd = dateEnd;
+    }
 }
