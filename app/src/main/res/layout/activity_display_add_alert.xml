@@ -87,7 +87,11 @@
         android:layout_alignLeft="@+id/pill"
         android:layout_marginLeft="38dp"
         android:hint="Prescription Name"
-        android:ellipsize="end" />
+        android:ellipsize="start"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:maxLines="1"
+        android:scrollHorizontally="true"/>
 
     <EditText
         android:layout_width="140dp"
@@ -98,7 +102,11 @@
         android:layout_alignTop="@+id/dosage"
         android:layout_alignLeft="@+id/dosage"
         android:layout_marginLeft="38dp"
-        android:hint="Dosage"/>
+        android:hint="Dosage"
+        android:maxLines="1"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
     <Spinner
         android:layout_width="80dp"
@@ -107,7 +115,6 @@
         android:layout_alignTop="@+id/dosage_entry"
         android:layout_alignLeft="@+id/dosage_entry"
         android:layout_marginLeft="145dp"
-        android:entries="@array/dosage_array"
         android:prompt="@string/dosage_prompt"/>
 
     <EditText
@@ -119,7 +126,10 @@
         android:layout_alignTop="@+id/dateend"
         android:layout_alignLeft="@+id/name_entry"
         android:layout_alignStart="@+id/name_entry"
-        android:hint="End of Prescription"/>
+        android:hint="End of Prescription"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -151,9 +161,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="submit"
-        android:id="@+id/submit_"
+        android:text="SUBMIT"
+        android:id="@+id/submit_check"
         android:layout_below="@+id/night_check"
-        android:layout_marginLeft="275dp"/>
+        android:layout_toRightOf="@+id/night_check"
+        android:layout_marginLeft="75dp"/>
 
 </RelativeLayout>
