@@ -12,8 +12,14 @@ public class DrugInfo {
     boolean noon;
     boolean night;
 
-    public DrugInfo() {
-
+    public DrugInfo(String name, int amount, int dateEnd, boolean morning,
+                    boolean noon, boolean night) {
+        this.name = name;
+        this.amount = amount;
+        this.dateEnd = dateEnd;
+        this.morning = morning;
+        this.noon = noon;
+        this.night = night;
     }
 
     public String getName() {
@@ -63,4 +69,9 @@ public class DrugInfo {
     public void setDateEnd(int dateEnd) {
         this.dateEnd = dateEnd;
     }
+
+    public String toString() {
+        return this.amount + " dose(s) of " + this.name;
+    }
+
 }
