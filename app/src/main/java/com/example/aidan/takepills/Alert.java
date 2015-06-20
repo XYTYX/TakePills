@@ -14,7 +14,9 @@ public class Alert extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage("Remember to take your FUCKIGN MEDS");
-
+        builder.setTitle("Reminder!");
+        builder.setMessage("TAKE YOR FUKCIN MEDS");
+        //builder.
+        return null;
     }
 }
