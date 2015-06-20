@@ -118,7 +118,8 @@
         android:layout_alignTop="@+id/dosage_entry"
         android:layout_alignLeft="@+id/dosage_entry"
         android:layout_marginLeft="145dp"
-        android:prompt="@string/dosage_prompt"/>
+        android:prompt="@string/dosage_prompt"
+        style="@style/AlertDialog.AppCompat.Light" />
 
     <EditText
         android:layout_width="wrap_content"
