@@ -6,10 +6,12 @@
 
     <ImageButton
         android:id="@+id/action_addalert"
+        android:paddingLeft="10px"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/ic_add_alert" />
+        android:src="@drawable/ic_add_alert"
+        android:background="@android:color/transparent" />
 
     <TextView
         android:text="TakePills"
@@ -25,7 +27,9 @@
     <ImageButton
         android:id="@+id/action_settings"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:paddingRight="10px"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
         android:src="@drawable/ic_settings" />
 </RelativeLayout>
