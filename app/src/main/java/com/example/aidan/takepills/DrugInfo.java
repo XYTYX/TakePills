@@ -20,7 +20,4 @@ public class DrugInfo {
     public String getName() {
         return this.name;
     }
-
-
-
 }
