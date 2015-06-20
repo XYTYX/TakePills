@@ -86,7 +86,8 @@
         android:layout_alignTop="@+id/pill"
         android:layout_alignLeft="@+id/pill"
         android:layout_marginLeft="38dp"
-        android:hint="Prescription Name" />
+        android:hint="Prescription Name"
+        android:ellipsize="end" />
 
     <EditText
         android:layout_width="140dp"
