@@ -80,7 +80,7 @@ public class displayAddAlertActivity extends Activity {
                             dateend_entry.setError("Please enter");
                         } else {
                             if (!(morning.isChecked()) && !(noon.isChecked()) && !(night.isChecked())) {
-                                Toast.makeText(displayAddAlertActivity.this, "Please select alert time", Toast.LENGTH_LONG).show();
+                                Toast.makeText(displayAddAlertActivity.this, "Please select an alert time", Toast.LENGTH_LONG).show();
                             }
                             else{
                                 DrugInfo x = new DrugInfo(name,dosage,dateend,morning.isChecked(),noon.isChecked(),night.isChecked());
