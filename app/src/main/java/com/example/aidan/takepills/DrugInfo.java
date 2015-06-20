@@ -6,13 +6,13 @@ package com.example.aidan.takepills;
 public class DrugInfo {
 
     String name;
-    int amount;
-    int dateEnd;
+    String amount;
+    String dateEnd;
     boolean morning;
     boolean noon;
     boolean night;
 
-    public DrugInfo(String name, int amount, int dateEnd, boolean morning,
+    public DrugInfo(String name, String amount, String dateEnd, boolean morning,
                     boolean noon, boolean night) {
         this.name = name;
         this.amount = amount;
@@ -30,11 +30,11 @@ public class DrugInfo {
         this.name = name;
     }
 
-    public int getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(int n) {
+    public void setAmount(String n) {
         this.amount = n;
     }
 
@@ -62,11 +62,11 @@ public class DrugInfo {
         this.night = night;
     }
 
-    public int getDateEnd() {
+    public String getDateEnd() {
         return dateEnd;
     }
 
-    public void setDateEnd(int dateEnd) {
+    public void setDateEnd(String dateEnd) {
         this.dateEnd = dateEnd;
     }
 

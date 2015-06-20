@@ -91,7 +91,9 @@
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:maxLines="1"
-        android:scrollHorizontally="true"/>
+        android:scrollHorizontally="true"
+        android:inputType="text"
+        android:lines="1" />
 
     <EditText
         android:layout_width="140dp"
@@ -106,7 +108,8 @@
         android:maxLines="1"
         android:enabled="true"
         android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:focusableInTouchMode="true"
+        android:lines="1" />
 
     <Spinner
         android:layout_width="80dp"
@@ -129,7 +132,9 @@
         android:hint="End of Prescription"
         android:enabled="true"
         android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:maxLines="1" />
 
     <CheckBox
         android:layout_width="wrap_content"
