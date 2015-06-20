@@ -2,4 +2,6 @@
     <string name="app_name">TakePills</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_display_add_alert">Add Alert</string>
+    <string name="title_activity_display_settings">Settings</string>
 </resources>
