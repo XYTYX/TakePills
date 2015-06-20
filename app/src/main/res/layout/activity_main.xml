@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="1">
-
             <ImageButton
                 android:id="@+id/action_addalert"
                 android:paddingLeft="4dp"
@@ -26,7 +25,7 @@
                 android:layout_alignParentLeft="true"
                 android:src="@drawable/ic_add_alert"
                 android:background="@android:color/transparent"
-                android:onClick="addAlert"/>
+                android:onClick="addAlert" />
 
             <TextView
                 android:text="TakePills"
@@ -51,7 +50,8 @@
                 android:layout_alignParentRight="true"
                 android:background="@android:color/transparent"
                 android:src="@drawable/ic_settings"
-                android:onClick="settingsMenu"/>
+                android:onClick="settingsMenu"
+                android:nestedScrollingEnabled="false" />
         </TableRow>
 
     </TableLayout>
