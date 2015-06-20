@@ -1,13 +1,9 @@
 package com.example.aidan.takepills;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -54,6 +50,8 @@ public class displayAddAlertActivity extends Activity {
 
         // attaching data adapter to spinner
         dosage_spinner.setAdapter(dataAdapter);
+        addListenerOnSpinnerItemSelection();
+        dosage_spinner.setSelection(0);
 
         name_entry = (EditText) findViewById(R.id.name_entry);
         dosage_entry = (EditText) findViewById(R.id.dosage_entry);
@@ -71,7 +69,7 @@ public class displayAddAlertActivity extends Activity {
                 if (name.isEmpty()) {
                     name_entry.setError("Please enter");
                 } else {
-                    final String dosage = dosage_entry.getText().toString();
+                    String dosage = dosage_entry.getText().toString();
                     if (dosage.isEmpty()) {
                         dosage_entry.setError("Please enter");
                     } else {
@@ -83,6 +81,15 @@ public class displayAddAlertActivity extends Activity {
                                 Toast.makeText(displayAddAlertActivity.this, "Please select an alert time", Toast.LENGTH_LONG).show();
                             }
                             else{
+                                int unit = dosage_spinner.getSelectedItemPosition();
+                                if(unit == 0)
+                                    dosage = dosage + " Pill(s)";
+                                if(unit == 1)
+                                    dosage = dosage + " Teaspoon(s)";
+                                if(unit == 2)
+                                    dosage = dosage + " mL";
+                                if(unit == 3)
+                                    dosage = dosage + " shots(s)";
                                 DrugInfo x = new DrugInfo(name,dosage,dateend,morning.isChecked(),noon.isChecked(),night.isChecked());
 
                                 Toast.makeText(displayAddAlertActivity.this, "Entry Successful", Toast.LENGTH_LONG).show();
@@ -93,4 +100,14 @@ public class displayAddAlertActivity extends Activity {
             }}
     );
 }
+    public void addListenerOnSpinnerItemSelection() {
+        dosage_spinner = (Spinner) findViewById(R.id.dosage_spinner);
+        dosage_spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+    }
 }
