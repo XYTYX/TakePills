@@ -10,7 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.R.*;
+
+import static com.example.aidan.takepills.R.*;
 
 public class DatabaseActivity extends ActionBarActivity {
 
@@ -23,9 +24,9 @@ public class DatabaseActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_add_alert);
+        setContentView(layout.activity_display_add_alert);
 
-        idView = (TextView) findViewById(R.id.medID);
+        idView = (TextView) findViewById(R.id.medId);
         medBox = (EditText) findViewById(R.id.medName);
         doseBox = (EditText) findViewById(R.id.medDose);
         statusBox = (EditText) findViewById(R.id.medStatus);
@@ -43,4 +44,6 @@ public class DatabaseActivity extends ActionBarActivity {
         statusBox.setText("");
         dateBox.setText("");
     }
+
+
 }
