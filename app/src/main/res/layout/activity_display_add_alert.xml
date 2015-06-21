@@ -1,8 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="50dp"
-    android:background="#81B285"
-    android:layout_gravity="fill_horizontal" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:layout_gravity="fill_horizontal"
+    android:id="@+id/displayAddAlert">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#81B285"
+        android:id="@+id/title_bar"/>
 
     <TextView android:text="Add an Alert"
         android:textSize="28dp"
@@ -11,7 +21,158 @@
         android:fontFamily="sans-serif-light"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/title_alert"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pill"
+        android:id="@+id/pill"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dosage"
+        android:id="@+id/dosage"
+        android:layout_below="@+id/pill"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="40dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dateend"
+        android:id="@+id/dateend"
+        android:layout_below="@+id/dosage"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_morning"
+        android:id="@+id/morning"
+        android:layout_below="@+id/dateend"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="70dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_noon"
+        android:id="@+id/noon"
+        android:layout_below="@+id/morning"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_night"
+        android:id="@+id/night"
+        android:layout_below="@+id/noon"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_entry"
+        android:layout_alignTop="@+id/pill"
+        android:layout_alignLeft="@+id/pill"
+        android:layout_marginLeft="38dp"
+        android:hint="Prescription Name"
+        android:ellipsize="start"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:inputType="text"
+        android:lines="1" />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/dosage_entry"
+        android:layout_alignTop="@+id/dosage"
+        android:layout_alignLeft="@+id/dosage"
+        android:layout_marginLeft="38dp"
+        android:hint="Dosage"
+        android:maxLines="1"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1" />
+
+    <Spinner
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dosage_spinner"
+        android:layout_alignTop="@+id/dosage_entry"
+        android:layout_alignLeft="@+id/dosage_entry"
+        android:layout_marginLeft="145dp"
+        android:prompt="@string/dosage_prompt"
+        style="@style/AlertDialog.AppCompat.Light" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dateend_entry"
+        android:layout_alignTop="@+id/dateend"
+        android:layout_alignLeft="@+id/name_entry"
+        android:layout_alignStart="@+id/name_entry"
+        android:hint="End of Prescription"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:onClick="newMed"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Morning"
+        android:id="@+id/morning_check"
+        android:layout_alignTop="@+id/morning"
+        android:layout_toRightOf="@+id/morning"
+        android:layout_marginLeft="6dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noon"
+        android:id="@+id/noon_check"
+        android:layout_alignTop="@+id/noon"
+        android:layout_toRightOf="@+id/noon"
+        android:layout_marginLeft="6dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Night"
+        android:id="@+id/night_check"
+        android:layout_alignTop="@+id/night"
+        android:layout_toRightOf="@+id/night"
+        android:layout_marginLeft="6dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submit_check"
+        android:layout_below="@+id/night_check"
+        android:layout_toRightOf="@+id/night_check"
+        android:layout_marginLeft="75dp"
+        />
 
 </RelativeLayout>
